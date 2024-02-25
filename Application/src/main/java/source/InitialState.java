@@ -1,21 +1,20 @@
 package source;
 
-import MaybeUnused.SpotifyCredentialsController;
 import org.apache.hc.core5.http.ParseException;
 import se.michaelthelin.spotify.exceptions.SpotifyWebApiException;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
+import java.util.concurrent.CompletableFuture;
 
 public class InitialState {
-    private final AuthorizationCodeUriExtractor authorizationCodeUriExtractor = new AuthorizationCodeUriExtractor();
+    private final AuthorizationCodeUriMaker authorizationCodeUriMaker = new AuthorizationCodeUriMaker();
     private final SpotifyApiInitializer spotifyApiInitializer = new SpotifyApiInitializer();
     private static final RefreshAuthorizationCodeManager refreshAuthorizationCodeManager = new RefreshAuthorizationCodeManager();
     public void GetMusicInfoPerDay() {
         var spotifyApi = spotifyApiInitializer.GetFreshSpotifyApi();
 
         var tracksBuilder = spotifyApi.getCurrentUsersRecentlyPlayedTracks()
-                .limit(50)
+                .limit(1)
                 .build();
         try {
             var tracks = tracksBuilder.execute();
@@ -31,11 +30,30 @@ public class InitialState {
     }
 
     public static void main(String[] args) throws IOException {
+//        var initialState = new InitialState();
+//        var authorizationCodeExtractor = new AuthorizationCodeExtractor();
+//        authorizationCodeExtractor.StartHttpExchange();
+//        initialState.authorizationCodeUriExtractor.MakeUriAuthorizationRequest();
+//        initialState.GetMusicInfoPerDay();
+        //refreshAuthorizationCodeManager.RefreshAuthorizationCode();
         var initialState = new InitialState();
         var authorizationCodeExtractor = new AuthorizationCodeExtractor();
-        authorizationCodeExtractor.StartHttpExchange();
-        //refreshAuthorizationCodeManager.RefreshAuthorizationCode();
-        initialState.authorizationCodeUriExtractor.MakeUriAuthorizationRequest();
-        //initialState.GetMusicInfoPerDay();
+
+        try {
+            // Start the HTTP exchange and await the new authorization code
+            CompletableFuture<String> authorizationCodeFuture = authorizationCodeExtractor.StartHttpExchange();
+
+            // MakeUriAuthorizationRequest doesn't need to change
+            initialState.authorizationCodeUriMaker.MakeUriAuthorizationRequest();
+
+            // Await the future to complete, which means a new authorization code has been received
+            String authorizationCode = authorizationCodeFuture.join(); // Blocks until the future is complete
+
+            // Now you can safely proceed to GetMusicInfoPerDay or any other operations that depend on the authorization code
+            initialState.GetMusicInfoPerDay();
+            refreshAuthorizationCodeManager.RefreshAuthorizationCode();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

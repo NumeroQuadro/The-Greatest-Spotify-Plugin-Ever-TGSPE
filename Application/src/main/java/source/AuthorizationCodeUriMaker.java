@@ -1,25 +1,25 @@
 package source;
 
-import models.JsonCacheModel;
-import models.JsonCachePathInfo;
-import models.SpotifyClientManager;
+import models.Tokens;
+import models.ResourcePaths;
+import models.SpotifyCredentials;
 import se.michaelthelin.spotify.SpotifyApi;
 import se.michaelthelin.spotify.requests.authorization.authorization_code.AuthorizationCodeUriRequest;
 
 import java.net.URI;
 import java.net.URISyntaxException;
 
-public class AuthorizationCodeUriExtractor {
-    private final SpotifyClientManager spotifyClientManager = new SpotifyClientManager();
-    private final JsonCachePathInfo jsonCachePathInfo = new JsonCachePathInfo();
-    private final JsonCacheModel jsonCacheModel = new JsonCacheModel();
+public class AuthorizationCodeUriMaker {
+    private final SpotifyCredentials spotifyCredentials = new SpotifyCredentials();
+    private final ResourcePaths resourcePaths = new ResourcePaths();
+    private final Tokens tokens = new Tokens();
 
     public void MakeUriAuthorizationRequest() {
         try {
             SpotifyApi spotifyApi = new SpotifyApi.Builder()
-                    .setClientId(spotifyClientManager.getClientId())
-                    .setClientSecret(spotifyClientManager.getClientSecret())
-                    .setRedirectUri(new URI(spotifyClientManager.getRedirectUri()))
+                    .setClientId(spotifyCredentials.getClientId())
+                    .setClientSecret(spotifyCredentials.getClientSecret())
+                    .setRedirectUri(new URI(spotifyCredentials.getRedirectUri()))
                     .build();
 
             AuthorizationCodeUriRequest authorizationCodeUriRequest = spotifyApi.authorizationCodeUri()

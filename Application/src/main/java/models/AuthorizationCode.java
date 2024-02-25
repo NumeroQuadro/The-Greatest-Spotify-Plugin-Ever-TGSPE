@@ -5,6 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class SpotifyAuthorizationInfo {
+public class AuthorizationCode {
     private String authorizationCode;
 }

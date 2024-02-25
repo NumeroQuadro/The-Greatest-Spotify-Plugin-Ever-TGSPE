@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class JsonCacheModel {
+public class Tokens {
     private String accessToken;
     private String tokenType;
     private Long expiresIn;
