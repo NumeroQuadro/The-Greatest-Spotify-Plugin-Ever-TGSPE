@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad1405bb-aa34-48fe-9a99-18dc8edbab22" name="Changes" comment="new gitignore file" />
+    <list default="true" id="ad1405bb-aa34-48fe-9a99-18dc8edbab22" name="Changes" comment="fuck shit test">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Application/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/models/Tokens.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/resources/cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/resources/cache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/resources/spotify_auth.json" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/resources/spotify_auth.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/source/AuthorizationCodeExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/source/AuthorizationCodeExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/source/AuthorizationCodeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/source/Managers/AuthorizationCodeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/source/AuthorizationCodeUriMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/source/AuthorizationCodeUriMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/source/InitialState.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/source/InitialState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/source/RefreshAuthorizationCodeManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/source/Managers/RefreshAuthorizationCodeManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/source/SpotifyApiInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/source/SpotifyApiInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Application/src/main/java/source/SpotifyTokenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Application/src/main/java/source/Managers/SpotifyTokenManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,15 +57,22 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
     &quot;Gradle.TheGreatestSpotifyPluginEver-TGSPE [:Program.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TheGreatestSpotifyPluginEver-TGSPE [dependencies].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TheGreatestSpotifyPluginEver-TGSPE:Application [:Application:AuthorizationCodeReceiver.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TheGreatestSpotifyPluginEver-TGSPE:Application [:Application:InitialState.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.TheGreatestSpotifyPluginEver-TGSPE:Application [:Application:LoginServer.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.TheGreatestSpotifyPluginEver-TGSPE:Infrastructure [:Infrastructure:ConnectionMain.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/The-Greatest-Spotify-Plugin-Ever-TGSPE/demo&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -60,8 +83,18 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\The-Greatest-Spotify-Plugin-Ever-TGSPE\TheGreatestSpotifyPluginEver-TGSPE\Infrastructure\src\main\java\resources" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.InitialState">
     <configuration name="AuthorizationCodeExtractor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="source.AuthorizationCodeExtractor" />
@@ -72,6 +105,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConnectionMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.ConnectionMain" />
+      <module name="TheGreatestSpotifyPluginEver-TGSPE.Infrastructure.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,25 +142,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Program" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="source.Program" />
-      <module name="TheGreatestSpotifyPluginEver-TGSPE.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MaybeUnused.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="TheGreatestSpotifyPluginEver-TGSPE [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TheGreatestSpotifyPluginEver-TGSPE [dependencies]" />
+        <item itemvalue="Application.ConnectionMain" />
         <item itemvalue="Application.AuthorizationCodeExtractor" />
         <item itemvalue="Application.LoginServer" />
         <item itemvalue="Application.InitialState" />
-        <item itemvalue="Application.Program" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +191,12 @@
       <updated>1708801901977</updated>
       <workItem from="1708801903091" duration="14121000" />
       <workItem from="1708857664334" duration="283000" />
-      <workItem from="1708857966234" duration="5678000" />
+      <workItem from="1708857966234" duration="16459000" />
+      <workItem from="1708878233596" duration="8289000" />
+      <workItem from="1708928991851" duration="1175000" />
+      <workItem from="1708931889807" duration="1546000" />
+      <workItem from="1709298501902" duration="276000" />
+      <workItem from="1709380618756" duration="1823000" />
     </task>
     <task id="LOCAL-00001" summary="fuck shit">
       <option name="closed" value="true" />
@@ -167,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708864173657</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fuck shit test">
+      <option name="closed" value="true" />
+      <created>1708864582252</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708864582252</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,13 +239,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fuck shit" />
     <MESSAGE value="new gitignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="new gitignore file" />
+    <MESSAGE value="fuck shit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="fuck shit test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Application/src/main/java/source/SpotifyTokenManager.java</url>
+          <url>file://$PROJECT_DIR$/Application/src/main/java/source/Managers/SpotifyTokenManager.java</url>
           <line>17</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -193,17 +257,22 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Application/src/main/java/source/InitialState.java</url>
-          <line>13</line>
+          <line>14</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Application/src/main/java/source/SpotifyApiInitializer.java</url>
-          <line>18</line>
+          <line>21</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Infrastructure/src/main/java/src/ConnectionMain.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/Application/src/main/java/source/AuthorizationCodeExtractor.java</url>
-          <line>9</line>
+          <line>10</line>
           <properties class="source.AuthorizationCodeExtractor">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

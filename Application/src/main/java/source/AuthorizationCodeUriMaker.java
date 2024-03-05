@@ -1,6 +1,5 @@
 package source;
 
-import models.Tokens;
 import models.ResourcePaths;
 import models.SpotifyCredentials;
 import se.michaelthelin.spotify.SpotifyApi;
@@ -12,8 +11,6 @@ import java.net.URISyntaxException;
 public class AuthorizationCodeUriMaker {
     private final SpotifyCredentials spotifyCredentials = new SpotifyCredentials();
     private final ResourcePaths resourcePaths = new ResourcePaths();
-    private final Tokens tokens = new Tokens();
-
     public void MakeUriAuthorizationRequest() {
         try {
             SpotifyApi spotifyApi = new SpotifyApi.Builder()

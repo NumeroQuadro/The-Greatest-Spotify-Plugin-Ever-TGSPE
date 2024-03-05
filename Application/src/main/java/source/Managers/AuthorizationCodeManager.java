@@ -1,4 +1,4 @@
-package source;
+package source.Managers;
 
 import models.ResourcePaths;
 import models.AuthorizationCode;

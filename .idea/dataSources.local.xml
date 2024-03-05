@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-233.14015.106">
+    <data-source name="postgres@95.140.157.16" uuid="87eedd8d-ad6e-41b1-b07d-13394267e4c8">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>gen_user</user-name>
+      <schema-mapping />
+    </data-source>
+    <data-source name="resources:hibernate.cfg.xml/Hibernate" uuid="fc852667-a026-4d75-8a77-9edbae014e61">
+      <database-info product="PostgreSQL" version="15.3 (Ubuntu 15.3-1.pgdg20.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.6.0" dbms="POSTGRES" exact-version="15.3" exact-driver-version="42.6">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>gen_user</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="database" qname="@">
+            <node kind="schema" qname="@" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="resources:hibernate.cfg.xml/Hibernate" uuid="9365bee4-205c-4593-8aae-c14be838c49f">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="POSTGRES" />
+      <user-name>gen_user</user-name>
+      <schema-mapping />
+    </data-source>
+  </component>
+</project>

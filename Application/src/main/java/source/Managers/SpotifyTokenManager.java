@@ -1,17 +1,19 @@
-package source;
+package source.Managers;
 
 
 import java.io.*;
 
-import models.Tokens;
 import models.ResourcePaths;
+import models.SpotifyCredentials;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import se.michaelthelin.spotify.SpotifyApi;
 
 import java.io.IOException;
 public class SpotifyTokenManager {
+    private final SpotifyCredentials spotifyCredentials = new SpotifyCredentials();
     private final ResourcePaths resourcePaths = new ResourcePaths();
-    public Tokens getStoredJsonCache() {
+    public SpotifyApi getStoredJsonCache() {
         JSONParser parser = new JSONParser();
 
         try {
@@ -19,23 +21,18 @@ public class SpotifyTokenManager {
             JSONObject jsonObject =  (JSONObject) obj;
 
             String accessToken = (String) jsonObject.get("access_token");
-            String tokenType = (String) jsonObject.get("token_type"); // usually Bearer
-            Long expires_in = (Long) jsonObject.get("expires_in"); // usually 3600 seconds
-            String scope = (String) jsonObject.get("scope");
-            Long expires_at = (Long) jsonObject.get("expires_at");
             String refreshToken = (String) jsonObject.get("refresh_token");
 
             System.out.println("Json object was deconstructed successfully");
 
-            var jsonModel = new Tokens();
-            jsonModel.setAccessToken(accessToken);
-            jsonModel.setTokenType(tokenType);
-            jsonModel.setRefreshToken(refreshToken);
-            jsonModel.setScope(scope);
-            jsonModel.setExpiresAt(expires_at);
-            jsonModel.setExpiresIn(expires_in);
+            var spotifyApi = new SpotifyApi.Builder()
+                    .setClientId(spotifyCredentials.getClientId())
+                    .setClientSecret(spotifyCredentials.getClientSecret())
+                    .setAccessToken(accessToken)
+                    .setRefreshToken(refreshToken)
+                    .build();
 
-            return jsonModel;
+            return spotifyApi;
         }
 
         catch (FileNotFoundException e) {
@@ -49,15 +46,11 @@ public class SpotifyTokenManager {
         return null;
     }
 
-    public void storeNewCacheJson(Tokens newJsonCache) {
+    public void storeNewCacheJson(SpotifyApi newJsonCache) {
         try {
             var newJsonStoredCache = new JSONObject();
 
             newJsonStoredCache.put("access_token", newJsonCache.getAccessToken());
-            newJsonStoredCache.put("token_type", newJsonCache.getTokenType());
-            newJsonStoredCache.put("expires_in", newJsonCache.getExpiresIn());
-            newJsonStoredCache.put("scope", newJsonCache.getScope());
-            newJsonStoredCache.put("expires_at", newJsonCache.getExpiresAt());
             newJsonStoredCache.put("refresh_token", newJsonCache.getRefreshToken());
 
             var fileToWrite = new FileWriter(resourcePaths.getCacheJsonPath());

@@ -1,8 +1,5 @@
-package source;
+package source.Managers;
 
-import models.Tokens;
-import models.ResourcePaths;
-import models.AuthorizationCode;
 import models.SpotifyCredentials;
 import org.apache.hc.core5.http.ParseException;
 import se.michaelthelin.spotify.SpotifyApi;
@@ -14,14 +11,15 @@ import java.io.IOException;
 
 public class RefreshAuthorizationCodeManager {
     private final SpotifyTokenManager spotifyTokenManager = new SpotifyTokenManager();
-    private final Tokens tokens = new Tokens();
     private final SpotifyCredentials spotifyCredentials = new SpotifyCredentials();
 
     public void RefreshAuthorizationCode() {
+        var currentJson = spotifyTokenManager.getStoredJsonCache();
+
         SpotifyApi spotifyApi = new SpotifyApi.Builder()
                 .setClientId(spotifyCredentials.getClientId())
                 .setClientSecret(spotifyCredentials.getClientSecret())
-                .setRefreshToken(tokens.getRefreshToken())
+                .setRefreshToken(currentJson.getRefreshToken())
                 .build();
 
         AuthorizationCodeRefreshRequest authorizationCodeRefreshRequest = spotifyApi.authorizationCodeRefresh().build();

@@ -1,3 +1,4 @@
 rootProject.name = 'TheGreatestSpotifyPluginEver-TGSPE'
 include 'Application'
+include 'Infrastructure'
 

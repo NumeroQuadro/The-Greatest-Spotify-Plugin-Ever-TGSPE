@@ -6,6 +6,8 @@ import se.michaelthelin.spotify.exceptions.SpotifyWebApiException;
 import se.michaelthelin.spotify.model_objects.credentials.AuthorizationCodeCredentials;
 import se.michaelthelin.spotify.requests.authorization.authorization_code.AuthorizationCodeRequest;
 import org.apache.hc.core5.http.ParseException;
+import source.Managers.AuthorizationCodeManager;
+import source.Managers.SpotifyTokenManager;
 
 import java.io.IOException;
 import java.net.URI;
@@ -16,6 +18,7 @@ public class SpotifyApiInitializer {
     private final AuthorizationCodeManager authorizationCodeManager = new AuthorizationCodeManager();
     private final SpotifyCredentials spotifyCredentials = new SpotifyCredentials();
     public SpotifyApi GetFreshSpotifyApi() {
+        // TODO: maybe remove GetFreshSpotifyApi and do this logic exactly after http handle
         String authorizationCode = authorizationCodeManager.GetAuthorizationCodeFromJson().getAuthorizationCode();
 
         try {

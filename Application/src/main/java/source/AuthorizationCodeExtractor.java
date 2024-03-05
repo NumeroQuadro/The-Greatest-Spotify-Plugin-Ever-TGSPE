@@ -3,6 +3,7 @@ package source;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
+import source.Managers.AuthorizationCodeManager;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -16,7 +17,7 @@ public class AuthorizationCodeExtractor {
         // Create HTTP server listening on localhost:5000
         HttpServer server = HttpServer.create(new InetSocketAddress(5000), 0);
         server.createContext("/redirect", new RedirectHandler());
-        server.setExecutor(null); // Use default executor
+        server.setExecutor(null); // Use default executor // TODO: try to use a custom executor instead of CompatibleFuture.runAsync
         server.start();
         System.out.println("Server started. Listening on port 5000.");
 
